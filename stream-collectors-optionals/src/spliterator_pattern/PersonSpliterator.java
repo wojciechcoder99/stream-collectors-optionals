@@ -1,5 +1,6 @@
 package spliterator_pattern;
 
+import java.util.Objects;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
@@ -11,6 +12,7 @@ class PersonSpliterator implements Spliterator<Person> {
     private String city;
 
     public PersonSpliterator(Spliterator<String> lineSpliterator) {
+        Objects.requireNonNull(lineSpliterator);
         this.lineSpliterator = lineSpliterator;
     }
 
