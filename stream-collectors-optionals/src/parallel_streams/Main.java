@@ -12,6 +12,7 @@ public class Main {
 //        Parallel.collectionsAreNotThreadSafe();
 //        Parallel.useSynchronizedMethodToMakeCollectionThreadSafe();
 //        Parallel.processingSet();
-        Parallel.statefulLambdaExpressions();
+//        Parallel.statefulLambdaExpressions();
+        Parallel.streamsCannotBeConsumedTwice();
     }
 }

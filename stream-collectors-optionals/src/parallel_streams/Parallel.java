@@ -108,6 +108,21 @@ final class Parallel {
         System.out.println(integers.size());
     }
 
+    public static void streamsCannotBeConsumedTwice() {
+        Stream<Integer> integerStream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        integerStream.filter(n -> n > 5).forEach(System.out::println);
+
+        // Streams are auto-closable after processing so we cannot use them twice
+        // Instead we have to define new stream
+        try {
+            integerStream.flatMap(n -> Stream.of(n,n,n)).forEach(System.out::println);
+        }
+        catch (IllegalStateException e) {
+            System.out.println("The same stream cannot be used twice if terminal operation has been executed!");
+        }
+    }
+
     public static void checkCharacteristics() {
         List<String> strings = new ArrayList<>();
         strings.add("one");
