@@ -1,2 +1,7 @@
-package collectors;public class Main {
+package collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        CollectorsUtil.collectingIntoMap();
+    }
 }

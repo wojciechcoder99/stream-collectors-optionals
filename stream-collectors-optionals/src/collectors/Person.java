@@ -1,2 +1,4 @@
-package collectors;public record Person() {
+package collectors;
+
+public record Person(String name, int age) {
 }
