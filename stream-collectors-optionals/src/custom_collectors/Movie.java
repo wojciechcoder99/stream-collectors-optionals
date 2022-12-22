@@ -21,4 +21,8 @@ class Movie {
     public Set<Actor> getActors() {
         return actors;
     }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
 }
